@@ -7,9 +7,11 @@ const Header = () => {
     return (
         <Navbar bg="light" variant="light">
         <Container>
-        <Navbar.Brand href="./home">Gan Store</Navbar.Brand>
+        <Navbar.Brand href="./home">
+         <h2>Gan Store</h2>
+        </Navbar.Brand>
         <Nav className="ms-auto">
-          <Nav.Link href="./"><FontAwesomeIcon icon={faShoppingCart} /></Nav.Link>
+          <Nav.Item href="./"><FontAwesomeIcon icon={faShoppingCart} /></Nav.Item>
         </Nav>
         </Container>
       </Navbar>
