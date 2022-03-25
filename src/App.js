@@ -18,13 +18,13 @@ function App() {
 
   return (
     <div>
-      <Header></Header>
+      <Header cart={cart}></Header>
       <Container>
-        <div>
+        {/* <div>
           {
             cart.map(item => <h2 key={item.id}>{item.name}</h2> )
           }
-        </div>
+        </div> */}
       <AllGans handleAddToCart={handleAddToCart} ></AllGans>
       </Container>
     </div>

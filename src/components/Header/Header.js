@@ -5,7 +5,7 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import './Header.css';
 
 
-const Header = () => {
+const Header = ({cart}) => {
     return (
         <Navbar bg="light" /* fixed="top"   */className='header'  variant="light">
         <Container>
@@ -15,7 +15,7 @@ const Header = () => {
         <Nav className="ms-auto">
           <Nav.Item href="./"> <FontAwesomeIcon className='shop' icon={faShoppingCart} /> </Nav.Item>
           <div className='count-box'>
-            <span className='countNumber' ></span>
+            <span className='countNumber'>{cart.length}</span>
           </div>
         </Nav>
         </Container>
