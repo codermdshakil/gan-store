@@ -1,0 +1,11 @@
+
+.gan-box{
+    padding: 20px;
+    border:1px solid black;
+    margin-bottom: 30px;
+}
+.gan-box img{
+    width: 80%;
+    display: block;
+    margin: auto;
+}

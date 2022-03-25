@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Gan from '../Gan/Gan';
 
 const AllGans = () => {
 
@@ -11,9 +12,9 @@ const AllGans = () => {
     },[])
 
     return (
-        <div className='gans-container'>
+        <div className='row'>
             {
-                gans.map(gan => console.log(gan))
+                gans.map(gan => <Gan gan={gan} key={gan.id}></Gan>)
             }
         </div>
     );
