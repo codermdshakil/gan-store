@@ -1,20 +1,31 @@
+import React, { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header/Header';
 import AllGans from './components/AllGans/AllGans';
 import { Container } from 'react-bootstrap';
-import { useState } from 'react';
 
 
 function App() {
-  const [count, setCount] = useState(0);
-  const addToCart = () => setCount(count + 1);
+
+  const [cart, setCart] = useState([]);
+  console.log(cart)
+
+  const handleAddToCart = (gan) => {
+    const newCart = [...cart, gan];
+    setCart(newCart);
+  }
 
   return (
     <div>
-      <Header count={count}></Header>
+      <Header></Header>
       <Container>
-      <AllGans addToCart={addToCart}></AllGans>
+        <div>
+          {
+            cart.map(item => <h2 key={item.id}>{item.name}</h2> )
+          }
+        </div>
+      <AllGans handleAddToCart={handleAddToCart} ></AllGans>
       </Container>
     </div>
   );

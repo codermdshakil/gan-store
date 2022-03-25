@@ -3,7 +3,7 @@ import Gan from '../Gan/Gan';
 import './AllGans.css';
 
 
-const AllGans = ({addToCart}) => {
+const AllGans = ({handleAddToCart}) => {
     const [gans, setGans] = useState([]);
 
     useEffect(()=> {
@@ -15,7 +15,7 @@ const AllGans = ({addToCart}) => {
     return (
         <div className='row py-5 all-container'>
             {
-                gans.map(gan => <Gan gan={gan} addToCart={addToCart} key={gan.id}></Gan>)
+                gans.map(gan => <Gan gan={gan}  handleAddToCart={handleAddToCart} key={gan.id}></Gan>)
             }
         </div>
     );
