@@ -12,7 +12,7 @@ const AllGans = () => {
     },[])
 
     return (
-        <div className='row'>
+        <div className='row py-5'>
             {
                 gans.map(gan => <Gan gan={gan} key={gan.id}></Gan>)
             }

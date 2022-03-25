@@ -1,16 +1,24 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import './Gan.css';
 
 
 const Gan = (props) => {
-
-    const {name, price, img} = props.gan;
+    console.log(props.gan)
+    const {name, price, img, bullet, capacity, action} = props.gan;
     return (
-        <div className='col-lg-4 col-md-6 col-10 d-block m-auto  '>
+        <div className='col-lg-4 col-md-6 col-10 d-block m-auto m-md-0 '>
            <div className='gan-box'>
              <img src={img} alt="" />
-             <h2>{name}</h2>
-             <h3>${price}</h3>
+             <h3>{name}</h3>
+             <p>Bullet : {bullet}</p>
+             <p>Capacity: {capacity}</p>
+             <p>Action: {action}</p>
+             <div className='d-flex align-items-center '>
+                 <FontAwesomeIcon className='shop-Icon' icon={faShoppingCart}/>
+                 <h3>${price}</h3>
+             </div>
            </div>
         </div>
     );
