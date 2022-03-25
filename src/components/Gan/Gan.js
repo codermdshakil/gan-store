@@ -3,10 +3,8 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import './Gan.css';
 
-
 const Gan = ({gan, handleAddToCart}) => {
     const {name, price, img, bullet, capacity, action} = gan;
-
     return (
         <div className='col-lg-4 col-md-6 col-10 d-block m-auto m-md-0 '>
            <div className='gan-box'>

@@ -7,7 +7,7 @@ import './Header.css';
 
 const Header = ({cart}) => {
     return (
-        <Navbar bg="light" /* fixed="top"   */className='header'  variant="light">
+        <Navbar bg="light" fixed="top" className='header'  variant="light">
         <Container>
         <Navbar.Brand href="./home">
          <h2 className='logo'>Gan Store</h2>
