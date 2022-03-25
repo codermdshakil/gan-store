@@ -1,17 +1,22 @@
-import React from 'react';
+import React  from 'react';
 import {Navbar, Nav ,Container} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import './Header.css';
 
-const Header = () => {
+
+const Header = ({count}) => {
     return (
-        <Navbar bg="light" variant="light">
+        <Navbar bg="light" fixed="top"  className='header'  variant="light">
         <Container>
         <Navbar.Brand href="./home">
-         <h2>Gan Store</h2>
+         <h2 className='logo'>Gan Store</h2>
         </Navbar.Brand>
         <Nav className="ms-auto">
-          <Nav.Item href="./"><FontAwesomeIcon icon={faShoppingCart} /></Nav.Item>
+          <Nav.Item href="./"> <FontAwesomeIcon className='shop' icon={faShoppingCart} /> </Nav.Item>
+          <div className='count-box'>
+            <span className='countNumber' >{count}</span>
+          </div>
         </Nav>
         </Container>
       </Navbar>

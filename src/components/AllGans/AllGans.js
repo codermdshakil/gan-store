@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Gan from '../Gan/Gan';
+import './AllGans.css';
 
-const AllGans = () => {
 
+const AllGans = ({addToCart}) => {
     const [gans, setGans] = useState([]);
 
     useEffect(()=> {
@@ -12,9 +13,9 @@ const AllGans = () => {
     },[])
 
     return (
-        <div className='row py-5'>
+        <div className='row py-5 all-container'>
             {
-                gans.map(gan => <Gan gan={gan} key={gan.id}></Gan>)
+                gans.map(gan => <Gan gan={gan} addToCart={addToCart} key={gan.id}></Gan>)
             }
         </div>
     );

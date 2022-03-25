@@ -4,9 +4,8 @@ import React from 'react';
 import './Gan.css';
 
 
-const Gan = (props) => {
-    console.log(props.gan)
-    const {name, price, img, bullet, capacity, action} = props.gan;
+const Gan = ({gan, addToCart}) => {
+    const {name, price, img, bullet, capacity, action} = gan;
     return (
         <div className='col-lg-4 col-md-6 col-10 d-block m-auto m-md-0 '>
            <div className='gan-box'>
@@ -16,8 +15,8 @@ const Gan = (props) => {
              <p>Capacity: {capacity}</p>
              <p>Action: {action}</p>
              <div className='d-flex align-items-center '>
-                 <FontAwesomeIcon className='shop-Icon' icon={faShoppingCart}/>
-                 <h3>${price}</h3>
+                 <FontAwesomeIcon className='shop-Icon' onClick={addToCart} icon={faShoppingCart}/>
+                 <h2>${price}</h2>
              </div>
            </div>
         </div>

@@ -10,7 +10,7 @@
     padding: 40px;
     background-color: #fff;
     display: block;
-    margin: 10px auto;
+    margin: 20px auto;
     clip-path: polygon(15% 0%, 100% 0, 100% 85%, 84% 100%, 0 100%, 0% 16%);
 }
 .gan-box p{
@@ -29,4 +29,9 @@
     padding: 10px;
     margin-right: 15%;
     cursor: pointer;
+    transition: .2s ease-in;
+}
+.shop-Icon:hover{
+    color: #fff;
+    background-color: rgba(32, 30, 30, 0.746) ;
 }
